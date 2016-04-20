@@ -1,0 +1,11 @@
+{
+  "name": "LuccaTest",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.6.9",
+    "gulp": "^3.8.11"    
+  }
+}

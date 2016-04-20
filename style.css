@@ -1,0 +1,31 @@
+html, body{
+    margin: 0;
+    padding:0;
+    font-family: 'Source Sans Pro', 'source_sans_proregular', sans-serif;
+}
+
+body{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+}
+
+header{
+    height:80px;
+    background-color:#f1ede9;
+    drop-shadow: 1px 2px 0px #aaa;
+    color:#F27020;
+    padding-left: 50px;
+}
+
+.button{
+    color: #7A7158;
+    width: 100px;
+    background-color: #fbb900;
+    border-radius: 2px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    padding: .4em 1em;
+}
+
