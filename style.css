@@ -2,6 +2,7 @@ html, body{
     margin: 0;
     padding:0;
     font-family: 'Source Sans Pro', 'source_sans_proregular', sans-serif;
+    color: #333;
 }
 
 body{
@@ -15,7 +16,43 @@ header{
     background-color:#f1ede9;
     drop-shadow: 1px 2px 0px #aaa;
     color:#F27020;
-    padding-left: 50px;
+    margin-bottom: 50px;
+    display: flex;
+}
+
+header h1{    
+    width: 50%;
+    margin: auto;
+}
+
+section{
+    width: 50%;
+    align-self: center;
+    display: flex;
+    flex:1;    
+    justify-content: center;
+}
+
+section .box{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    flex:1; 
+}
+
+section .box .row{
+    display: flex;    
+    align-items: center;
+}
+
+section .box textarea {
+    height:200px;
+    margin-bottom: 10px;
+}
+
+section .box input{
+    margin-right : 15px;
+    flex:1;
 }
 
 .button{
@@ -29,3 +66,30 @@ header{
     padding: .4em 1em;
 }
 
+@media screen and (max-width: 640px){
+    
+    header{
+        margin-bottom: 0;
+        height: 60px;
+    }
+    
+    header h1{
+        width: 100%;
+        padding-left: 10px;        
+    }
+    
+    section{
+        width:100%;
+        flex-direction: column;
+    }
+    
+    section .box{
+        margin-top:0px;
+        margin-bottom: 0px;
+    }
+    
+    section .box textarea{
+        height: 100px;
+    }
+    
+}
