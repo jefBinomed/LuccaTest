@@ -70,15 +70,18 @@ var MorseEncoder = MorseEncoder || function(){
 
 var LuccaTest = LuccaTest || function(){
     
+    // Déclaration des variables d'éléments html
     let input1 = null,
         input2 = null,
         area1 = null,
         area2 = null;
+        // Déclaration des constantes lié au morse
 	const SPACE = 1000,
       	  PAUSE = 400,
 		  POINT = 200,
 		  TRAIT = 600;
-        
+    
+    // Fonction de traduction d'une chaine de caractère en morse    
     function morseTime(data){
         var chars=MorseEncoder.encode(data).split("");
           var tempText = "";
@@ -94,12 +97,16 @@ var LuccaTest = LuccaTest || function(){
               arrayVibration.push(SPACE);
             }
           }
+          // On check si la fonction est présente
           if (navigator.vibrate){              
             window.navigator.vibrate(arrayVibration);
           }
     }
     
+    // Handler de click
     function click(event){
+    	// Simple gestion du binding 
+    	// On ajoute une nouvelle ligne à la text area cible à chaque envoie
         if (event.target.id === 'btn1'){
             if (input1.value && input1.value.length > 0){                
                 area2.value = area2.value+"\n"+input1.value;
@@ -113,9 +120,9 @@ var LuccaTest = LuccaTest || function(){
                 input2.value = "";
             }
         }
-        console.log(event);
     }
     
+    // Fonction d'initialisation
     function pageLoad(){
            document.querySelector("#btn1").addEventListener('click', click);
            document.querySelector("#btn2").addEventListener('click', click);
